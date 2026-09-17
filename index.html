@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,12 +17,20 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      .sidebar{
+        position: fixed;
+        height: 100vh;
+        background-color: rgb(26, 25, 25);
+        
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href=""
-          ><i class="fa-brands fa-spotify" style="color: rgb(237, 238, 243)"></i
+          ><i class="fa-brands fa-spotify text-success" style="color: rgb(237, 238, 243)"></i
         ></a>
         <a class="navbar-brand"
           ><i class="fa-solid fa-house" style="color: rgb(239, 241, 246)"></i
@@ -53,10 +61,456 @@
         </button>
       </div>
     </nav>
+
+    <div class="main">
+      <div class="row">
+        <div class="col-12 md-3 lg-4 ">
+          <div class="sidebar pt-5">
+            <div class="header d-flex justify-content-between align-items-center p-3">
+              <h3>Your Library</h3>
+              <button class="btn btn-outline-light rounded-4">Create</button>
+            </div>
+          </div>
+        </div>
+        <div class="col col md-9 lg-8">
+        <div class="container pt-3 bg-dark ">
+          <div class="row">
+            <div class="">
+              <div class="card shadow">
+                <h1 class="card-title">dshjs</h1>
+                <p class="card-text">cards dk</p>
+
+              </div>
+            </div>
+             <div class="col md-9 lg-8">
+              <div class="card shadow">
+                <h1 class="card-title">dshjs</h1>
+                <p class="card-text">cards dk</p>
+
+              </div>
+            </div>
+             <div class="col md-9 lg-8">
+              <div class="card shadow">
+                <h1 class="card-title">dshjs</h1>
+                <p class="card-text">cards dk</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
   </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spotify</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href=""
+          ><i class="fa-brands fa-spotify text-success"></i
+        >  Spotify</a>
+        <a class="navbar-brand"
+          ><i class="fa-solid fa-house" style="color: rgb(239, 241, 246)"></i
+        ></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainlinks"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainlinks">
+        <input
+          class="form-control w-25 ms-5 col-12-ms-0"
+          placeholder="Search..."
+          type="search"
+        />
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="">Premium</a></li>
+            <li class="nav-item"><a class="nav-link" href="">Support</a></li>
+            <li class="nav-item"><a class="nav-link" href="">Download</a></li>
+          </ul>
+        </div>
+        <button class="btn rounded-5 bg-light fw-bold ms-4" type="button">
+          Sign Up
+        </button>
+      </div>
+    </nav>
+
+<!-- NAVBAR -->
+<!-- <nav class="navbar navbar-dark bg-black px-3 py-3">
+
+    <div class="container-fluid">
+
+        <a class="navbar-brand fw-bold fs-3" href="#">
+            <i class="fa-brands fa-spotify text-success"></i>
+            Spotify
+        </a>
+
+        <div class="d-flex gap-3">
+
+            <button class="btn btn-outline-light rounded-pill">
+                Sign up
+            </button>
+
+            <button class="btn btn-light rounded-pill px-4">
+                Log in
+            </button>
+
+        </div>
+
+    </div>
+
+</nav> -->
+
+
+<!-- MAIN CONTENT -->
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <!-- SIDEBAR -->
+        <aside class="col-lg-2 sidebar p-4">
+
+            <h6 class="text-secondary">MENU</h6>
+
+            <a href="#" class="sidebar-link active">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+            </a>
+
+            <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-book"></i>
+                Your Library
+            </a>
+
+            <hr class="text-secondary">
+
+            <h6 class="text-secondary">PLAYLISTS</h6>
+
+            <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-plus"></i>
+                Create Playlist
+            </a>
+
+            <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-heart"></i>
+                Liked Songs
+            </a>
+
+        </aside>
+
+
+        <!-- HOME -->
+        <main class="col-lg-10 home p-4">
+
+            <h2 class="text-white fw-bold mb-4">
+                Good morning
+            </h2>
+
+
+            <!-- QUICK PLAYLISTS -->
+
+            <div class="row g-3 mb-5">
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="quick-card">
+                        <img src="./media/song1.jpg">
+                        <span>Daily Mix 1</span>
+                        <audio src="./media/the_mountain-reels-song-576585.mp3" controls></audio>
+                        <button>
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="quick-card">
+                        <img src="./media/song2.jpg">
+                        <span>Chill Hits</span>
+                        <button>
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="quick-card">
+                        <img src="./media/song3.jpg">
+                        <span>Workout Music</span>
+                        <button>
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- RECENTLY PLAYED -->
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+
+                <h3 class="text-white fw-bold">
+                    Recently played
+                </h3>
+
+                <a href="#" class="text-secondary">
+                    Show all
+                </a>
+
+            </div>
+          
+
+            <div class="row g-4 mb-5">
+              <!-- <div class="container-card"> -->
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+
+                    <div class="music-card">
+
+                        <img src="./media/song1.jpg">
+
+                        <h6>Daily Mix 1</h6>
+
+                        <p>
+                            The best music for your day
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+
+                    <div class="music-card">
+
+                        <img src="./media/song2.jpg">
+
+                        <h6>Chill Vibes</h6>
+
+                        <p>
+                            Relax and enjoy your music
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+
+                    <div class="music-card">
+
+                        <img src="./media/song3.jpg">
+
+                        <h6>Workout</h6>
+
+                        <p>
+                            Music to keep you moving
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+
+                    <div class="music-card">
+
+                        <img src="./media/song4.jpg">
+
+                        <h6>Top Hits</h6>
+
+                        <p>
+                            Popular songs right now
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+
+                    <div class="music-card">
+
+                        <img src="./media/song5.jpg">
+
+                        <h6>Love Songs</h6>
+
+                        <p>
+                            Romantic songs for you
+                        </p>
+
+                    </div>
+
+                </div>
+                <!-- </div> -->
+            </div>
+
+
+            <!-- MADE FOR YOU -->
+
+            <h3 class="text-white fw-bold mb-3">
+                Made for you
+            </h3>
+
+            <div class="row g-4 pb-5">
+
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+
+                    <div class="music-card">
+
+                        <img src="./media/song3.jpg">
+
+                        <h6>Discover Weekly</h6>
+
+                        <p>
+                            Your weekly mixtape
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+
+                    <div class="music-card">
+
+                        <img src="./media/song4.jpg">
+
+                        <h6>Release Radar</h6>
+
+                        <p>
+                            New music for you
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+<!-- MUSIC PLAYER -->
+
+<div class="player">
+
+    <div class="container-fluid">
+
+        <div class="row align-items-center">
+
+            <div class="col-4">
+
+                <div class="d-flex align-items-center gap-2">
+
+                    <img
+                        src="./media/song1.jpg"
+                        width="50"
+                        height="50"
+                    >
+
+                    <div class="d-none d-md-block">
+
+                        <h6 class="text-white mb-0">
+                            Song Name
+                        </h6>
+
+                        <small class="text-secondary">
+                            Artist Name
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-4 text-center">
+
+                <div class="player-buttons">
+
+                    <i class="fa-solid fa-backward-step"></i>
+
+                    <i class="fa-solid fa-circle-play play-btn"></i>
+
+                    <i class="fa-solid fa-forward-step"></i>
+
+                </div>
+
+                <div class="progress mt-2">
+                    <div class="progress-bar bg-success"
+                         style="width: 35%;">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-4 text-end">
+
+                <i class="fa-solid fa-volume-high text-white"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
+
